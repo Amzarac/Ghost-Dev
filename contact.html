@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Contact | Ghost-Dev</title>
+
+  <link rel="stylesheet" href="global.css" />
+
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar">
+
+        <div class="nav-brand">Ghost-Dev</div>
+    
+        <div class="nav-toggle" onclick="toggleMenu()">&#9776;</div>
+    
+        <ul class="nav-links" id="navLinks">
+    
+          <li><a href="index.html" class="glitch-hover" data-text="Home">Home</a></li>
+
+          <li><a href="about.html" class="glitch-hover" data-text="About">About</a></li>
+
+          <li><a href="services.html" class="glitch-hover" data-text="Services">Services</a></li>
+
+          <li><a href="shadowlaunch.html" class="glitch-hover" data-text="ShadowLaunch">ShadowLaunch</a></li>
+
+          <li><a href="contact.html" class="glitch-hover" data-text="Contact">Contact</a></li>
+    
+        </ul>
+    
+      </nav>
+    <a href="index.html"><img src="c:\Users\ousum_8at0n7n\Desktop\Ghost-Dev 2.0 final\images\GD2.png" alt="Ghost-Dev Logo" class="logo"/></a>
+
+    <h1>Contact Ghost-Dev</h1>
+
+  </header>
+
+  <main>
+
+    <section>
+
+      <p>We’re currently accepting clients, collaborators, and investors. Use the form below or send a ghost signal.</p>
+
+      <form action="mailto:contact@ghostdev.io" method="POST" enctype="text/plain">
+
+        <input type="text" name="name" placeholder="Your Name" required />
+
+        <input type="email" name="email" placeholder="Your Email" required />
+
+        <textarea name="message" placeholder="Your Message" required></textarea>
+
+        <button type="submit">Send</button>
+
+      </form>
+
+    </section>
+
+  </main> <canvas id="matrix-bg"></canvas>
+
+  <script>
+
+    const canvas = document.getElementById('matrix-bg');
+    
+    const ctx = canvas.getContext('2d');
+    
+    
+    canvas.height = window.innerHeight;
+    
+    canvas.width = window.innerWidth;
+    
+    
+    const letters = "01"; // Binary theme
+    
+    const fontSize = 14;
+    
+    const columns = canvas.width / fontSize;
+    
+    const drops = Array.from({ length: columns }).fill(1);
+    
+    
+    function drawMatrix() {
+    
+      ctx.fillStyle = "rgba(0, 0, 0, 0.08)";
+    
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+    
+    
+      ctx.fillStyle = "#00ffc3";
+    
+      ctx.font = fontSize + "px monospace";
+    
+    
+      for (let i = 0; i < drops.length; i++) {
+    
+        const char = letters[Math.floor(Math.random() * letters.length)];
+    
+        ctx.fillText(char, i * fontSize, drops[i] * fontSize);
+    
+    
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+    
+          drops[i] = 0;
+    
+        }
+    
+        drops[i]++;
+    
+      }
+    
+    }
+    
+    
+    setInterval(drawMatrix, 33);
+    
+    
+    window.addEventListener('resize', () => {
+    
+      canvas.width = window.innerWidth;
+    
+      canvas.height = window.innerHeight;
+    
+    });
+    
+    </script>
+
+</body>
+
+</html>

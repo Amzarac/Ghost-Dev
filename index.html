@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Ghost-Dev | Engineering the Future in Silence</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<!-- Preloader -->
+
+<div id="preloader">
+
+    <div class="preloader-content">
+
+      <h1 class="decrypt">We are the code behind the future</h1>
+  
+      <img src="c:\Users\ousum_8at0n7n\Desktop\Ghost-Dev 2.0 final\images\GD2.png" alt="Ghost-Dev Logo" class="preloader-logo">
+  
+      <p class="preloader-text">Initializing Ghost-Dev...</p>
+  
+    </div>
+  
+  </div>
+
+
+<body class="dark-theme">
+
+  <div id="terminal-swipe"></div>
+
+  <!-- Header / Navigation -->
+
+  <header class="header">
+
+    <div class="container">
+
+      <div class="logo">
+
+        <img src="c:\Users\ousum_8at0n7n\Desktop\Ghost-Dev 2.0 final\images\GD2.png" alt="Ghost-Dev Logo">
+
+      </div>
+
+      <nav class="nav">
+
+        <ul>
+
+          <li><a href="index.html" class="glitch-hover" data-text="Home">Home</a></li>
+
+          <li><a href="about.html" class="glitch-hover" data-text="About">About</a></li>
+
+          <li><a href="services.html" class="glitch-hover" data-text="Services">Services</a></li>
+
+          <li><a href="shadowlaunch.html" class="glitch-hover" data-text="ShadowLaunch">ShadowLaunch</a></li>
+
+          <li><a href="contact.html" class="glitch-hover" data-text="Contact">Contact</a></li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- Hero Section -->
+
+  <section class="hero">
+
+    <div class="container">
+
+      <h1>Engineering the Future in Silence</h1>
+
+      <p>Elite development for tomorrow’s web, blockchain, and AI frontiers.</p>
+
+      <a href="contact.html" class="btn-primary">Start Your Project</a>
+
+    </div>
+
+  </section>
+
+
+  <!-- About Preview Section -->
+
+  <section class="about-preview">
+
+    <div class="container">
+
+      <h2>Move Beyond the Noise</h2>
+
+      <p>At Ghost-Dev, we don’t just build websites and apps — we craft digital assets designed to dominate in stealth. Crypto transactions, decentralized apps, AI-driven platforms — engineered for those ready to lead, not follow.</p>
+
+    </div>
+
+  </section>
+
+
+  <!-- Services Preview Section -->
+
+  <section class="services-preview">
+
+    <div class="container">
+
+      <div class="service-item">
+
+        <h3>Web & App Development</h3>
+
+        <p>Custom, elite-grade solutions for businesses ready to level up.</p>
+
+      </div>
+
+      <div class="service-item">
+
+        <h3>Crypto Integration</h3>
+
+        <p>Secure, scalable blockchain systems built with precision.</p>
+
+      </div>
+
+      <div class="service-item">
+
+        <h3>AI Marketing (Coming Soon)</h3>
+
+        <p>Deploy next-gen ads and content with ShadowLaunch.</p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ShadowLaunch Teaser Section -->
+
+  <section class="shadowlaunch-teaser">
+
+    <div class="container">
+
+      <h2>Coming Soon: ShadowLaunch</h2>
+
+      <p>AI-crafted ads. Launched like shadows. Designed to dominate.</p>
+
+      <a href="shadowlaunch.html" class="btn-secondary">Join the Waitlist</a>
+
+    </div>
+
+  </section>
+
+
+  <!-- Footer -->
+
+  <footer class="footer">
+
+    <div class="container">
+
+      <p>&copy; 2025 Ghost-Dev. All rights reserved.</p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- Scripts -->
+
+  <script src="main.js"></script>
+
+  <canvas id="matrix-bg"></canvas>
+
+  <script>
+
+    const canvas = document.getElementById('matrix-bg');
+    
+    const ctx = canvas.getContext('2d');
+    
+    
+    canvas.height = window.innerHeight;
+    
+    canvas.width = window.innerWidth;
+    
+    
+    const letters = "01"; // Binary theme
+    
+    const fontSize = 14;
+    
+    const columns = canvas.width / fontSize;
+    
+    const drops = Array.from({ length: columns }).fill(1);
+    
+    
+    function drawMatrix() {
+    
+      ctx.fillStyle = "rgba(0, 0, 0, 0.08)";
+    
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+    
+    
+      ctx.fillStyle = "#00ffc3";
+    
+      ctx.font = fontSize + "px monospace";
+    
+    
+      for (let i = 0; i < drops.length; i++) {
+    
+        const char = letters[Math.floor(Math.random() * letters.length)];
+    
+        ctx.fillText(char, i * fontSize, drops[i] * fontSize);
+    
+    
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+    
+          drops[i] = 0;
+    
+        }
+    
+        drops[i]++;
+    
+      }
+    
+    }
+    
+    
+    setInterval(drawMatrix, 33);
+    
+    
+    window.addEventListener('resize', () => {
+    
+      canvas.width = window.innerWidth;
+    
+      canvas.height = window.innerHeight;
+    
+    });
+    
+    </script>
+
+</body>
+
+</html>
+

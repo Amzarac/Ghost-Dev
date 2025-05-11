@@ -1,0 +1,485 @@
+/* Base Settings */
+
+body {
+
+    margin: 0;
+  
+    padding: 0;
+  
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  
+    background-color: #0a0a0a; /* Deep black */
+  
+    color: #d0d0d0; /* Light silver-gray */
+  
+  }
+  
+  
+  /* Container */
+  
+  .container {
+  
+    width: 90%;
+  
+    max-width: 1200px;
+  
+    margin: 0 auto;
+  
+    padding: 20px 0;
+  
+  }
+  
+  
+  /* Header */
+  
+  .header {
+  
+    background-color: #0f0f0f;
+  
+    padding: 20px 0;
+  
+    border-bottom: 1px solid #1f1f1f;
+  
+    position: sticky;
+  
+    top: 0;
+  
+    z-index: 1000;
+  
+  }
+  
+  
+  .logo img {
+  
+    height: 50px;
+  
+  }
+  
+  
+  .nav ul {
+  
+    list-style: none;
+  
+    padding: 0;
+  
+    margin: 0;
+  
+    display: flex;
+  
+    gap: 30px;
+  
+    justify-content: flex-end;
+  
+    align-items: center;
+  
+  }
+  
+  
+  .nav a {
+  
+    text-decoration: none;
+  
+    color: #d0d0d0;
+  
+    transition: color 0.3s ease;
+  
+    font-weight: 500;
+  
+  }
+  
+  
+  .nav a:hover,
+  
+  .nav a.active {
+  
+    color: #00ff88; /* Subtle neon green for highlights */
+  
+  }
+  
+  
+  /* Hero Section */
+  
+  .hero {
+  
+    background: linear-gradient(to bottom right, #0a0a0a, #111);
+  
+    text-align: center;
+  
+    padding: 100px 20px;
+  
+  }
+  
+  
+  .hero h1 {
+  
+    font-size: 48px;
+  
+    color: #ffffff;
+  
+    margin-bottom: 20px;
+  
+  }
+  
+  
+  .hero p {
+  
+    font-size: 20px;
+  
+    margin-bottom: 40px;
+  
+    color: #b0b0b0;
+  
+  }
+  
+  
+  .btn-primary {
+  
+    background-color: #00ff88;
+  
+    color: #0a0a0a;
+  
+    padding: 14px 30px;
+  
+    font-size: 16px;
+  
+    border: none;
+  
+    border-radius: 5px;
+  
+    text-transform: uppercase;
+  
+    cursor: pointer;
+  
+    transition: background 0.3s ease;
+  
+    text-decoration: none;
+  
+  }
+  
+  
+  .btn-primary:hover {
+  
+    background-color: #00cc6e;
+  
+  }
+  
+  
+  /* About Preview Section */
+  
+  .about-preview {
+  
+    padding: 80px 20px;
+  
+    text-align: center;
+  
+  }
+  
+  
+  .about-preview h2 {
+  
+    font-size: 36px;
+  
+    margin-bottom: 20px;
+  
+    color: #ffffff;
+  
+  }
+  
+  
+  .about-preview p {
+  
+    font-size: 18px;
+  
+    color: #b0b0b0;
+  
+  }
+  
+  
+  /* Services Preview Section */
+  
+  .services-preview {
+  
+    background-color: #111;
+  
+    padding: 80px 20px;
+  
+    text-align: center;
+  
+  }
+  
+  
+  .service-item {
+  
+    margin-bottom: 40px;
+  
+  }
+  
+  
+  .service-item h3 {
+  
+    font-size: 28px;
+  
+    color: #00ff88;
+  
+    margin-bottom: 10px;
+  
+  }
+  
+  
+  .service-item p {
+  
+    font-size: 16px;
+  
+    color: #b0b0b0;
+  
+  }
+  
+  
+  /* ShadowLaunch Teaser Section */
+  
+  .shadowlaunch-teaser {
+  
+    background: linear-gradient(to top right, #0a0a0a, #111);
+  
+    padding: 80px 20px;
+  
+    text-align: center;
+  
+  }
+  
+  
+  .shadowlaunch-teaser h2 {
+  
+    font-size: 36px;
+  
+    color: #ffffff;
+  
+    margin-bottom: 20px;
+  
+  }
+  
+  
+  .shadowlaunch-teaser p {
+  
+    font-size: 18px;
+  
+    color: #b0b0b0;
+  
+    margin-bottom: 30px;
+  
+  }
+  
+  
+  .btn-secondary {
+  
+    background-color: transparent;
+  
+    color: #00ff88;
+  
+    padding: 12px 25px;
+  
+    border: 2px solid #00ff88;
+  
+    border-radius: 5px;
+  
+    text-transform: uppercase;
+  
+    text-decoration: none;
+  
+    transition: background 0.3s ease;
+  
+  }
+  
+  
+  .btn-secondary:hover {
+  
+    background-color: #00ff88;
+  
+    color: #0a0a0a;
+  
+  }
+  
+  
+  /* Footer */
+  
+  .footer {
+  
+    background-color: #0f0f0f;
+  
+    text-align: center;
+  
+    padding: 30px 20px;
+  
+    font-size: 14px;
+  
+    color: #666;
+  
+    border-top: 1px solid #1f1f1f;
+  
+  }
+  /* Button Hover Animations (already smooth from before) */
+
+.btn-primary, .btn-secondary {
+
+    transition: all 0.3s ease-in-out;
+  
+  }
+  
+  
+  /* Add slight hover grow */
+  
+  .btn-primary:hover, .btn-secondary:hover {
+  
+    transform: scale(1.05);
+  
+  }
+  
+  
+  /* Glitch Animation Keyframes */
+  
+  @keyframes glitch {
+  
+    0% { text-shadow: 2px 2px #00ff88, -2px -2px #00ff88; }
+  
+    20% { text-shadow: -2px 2px #00ff88, 2px -2px #00ff88; }
+  
+    40% { text-shadow: 2px -2px #00ff88, -2px 2px #00ff88; }
+  
+    60% { text-shadow: -2px -2px #00ff88, 2px 2px #00ff88; }
+  
+    80% { text-shadow: 2px 2px #00ff88, -2px -2px #00ff88; }
+  
+    100% { text-shadow: none; }
+  
+  }
+  
+  
+  /* Apply glitch effect to hero h1 */
+  
+  .hero h1 {
+  
+    animation: glitch 2s infinite;
+  
+    animation-timing-function: ease-in-out;
+  
+  }
+  
+/* Preloader Styles */
+
+#preloader {
+
+    position: fixed;
+  
+    top: 0;
+  
+    left: 0;
+  
+    width: 100%;
+  
+    height: 100%;
+  
+    background-color: #0a0a0a;
+  
+    display: flex;
+  
+    justify-content: center;
+  
+    align-items: center;
+  
+    flex-direction: column;
+  
+    z-index: 9999;
+  
+  }
+  
+  
+  .preloader-logo {
+  
+    width: 120px;
+  
+    height: auto;
+  
+    animation: pulseGlow 2s infinite alternate;
+  
+  }
+  
+  
+  @keyframes pulseGlow {
+  
+    0% { filter: drop-shadow(0 0 5px #00ff88); }
+  
+    100% { filter: drop-shadow(0 0 20px #00ff88); }
+  
+  }
+  
+  
+  .preloader-text {
+  
+    margin-top: 20px;
+  
+    color: #00ff88;
+  
+    font-size: 18px;
+  
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  
+    animation: flicker 1.5s infinite;
+  
+  }
+  
+  
+  @keyframes flicker {
+  
+    0%, 100% { opacity: 1; }
+  
+    50% { opacity: 0.5; }
+  
+  }
+  
+  #matrix-bg {
+
+    position: fixed;
+  
+    top: 0;
+  
+    left: 0;
+  
+    z-index: -10;
+  
+    width: 100%;
+  
+    height: 100%;
+  
+    opacity: 0.08;
+  
+    pointer-events: none;
+  
+  }
+  
+  #terminal-swipe {
+
+    position: fixed;
+  
+    top: 0;
+  
+    left: 0;
+  
+    height: 100%;
+  
+    width: 100%;
+  
+    background: #000;
+  
+    z-index: 9999;
+  
+    transform: scaleY(0);
+  
+    transform-origin: top;
+  
+    transition: transform 0.6s ease-in-out;
+  
+    pointer-events: none;
+  
+  }
+  
+    
